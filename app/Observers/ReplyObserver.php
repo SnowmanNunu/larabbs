@@ -12,6 +12,7 @@ class ReplyObserver
     public function creating(Reply $reply)
     {
         //
+        $reply->topic->increment('reply_count',1);
     }
 
     public function updating(Reply $reply)
